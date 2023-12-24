@@ -8,7 +8,7 @@ export default function LogoutButton({
 }) {
   return (
     <button
-      className={`${className} hover:bg-gray-200 rounded-full`}
+      className={`${className} hover:bg-gray-200 rounded-full hover:text-white`}
       onClick={() => signOut()}
     >
       <div className='flex flex-col items-center dark:text-white'>

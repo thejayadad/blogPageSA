@@ -16,7 +16,7 @@ const AuthLinks =  async (  ) => {
             <>
             <div className='flex items-center'>
             <Link 
-            className='text-gray-800 dark:text-white transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-4 hover:text-orange-200 rounded-full'
+            className='links'
             href={'/create'}>Create</Link>
             <LogoutButton />
             </div>

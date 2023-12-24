@@ -15,10 +15,8 @@ body{
   overflow-x: hidden;
 }
 
-@layer components {
-  .titletext {
-    color: red;
-    margin: 0 auto;
+@layer utilities {
+  .links{
+    @apply text-gray-800 dark:text-white transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-4 hover:text-white rounded-full
   }
-
 }
