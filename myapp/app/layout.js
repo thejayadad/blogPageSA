@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import { ThemeContextProvider } from '@/lib/ThemeContext'
 import ThemeProvider from '@/lib/ThemeProvider'
 import AuthProvider from '@/SessionProvider'
+import Footer from '@/components/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +22,8 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
         <Navbar />
         {children}  
-        </ThemeProvider>      
+        </ThemeProvider>
+        <Footer />      
        </ThemeContextProvider>
         </AuthProvider>
         </body>
