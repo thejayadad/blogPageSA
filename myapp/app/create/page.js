@@ -1,5 +1,6 @@
 import { SubmitButton } from '@/components/Buttons/SubmitButton';
 import TextEditor from '@/components/TextEditor/TextEditor';
+import { createPost } from '@/lib/actions';
 import getServerUser from '@/lib/getServerUser';
 import React from 'react';
 
@@ -31,7 +32,9 @@ const CreatePost = async () => {
           <span className='font-semibold text-lg'>Creator {creator}</span>
         </div>
 
-        <form className='flex flex-col w-full'>
+        <form 
+        action={createPost}
+        className='flex flex-col w-full'>
           <label className='font-semibold text-lg mb-2'>Title Your Memory</label>
           <input
             name='title'
@@ -40,20 +43,13 @@ const CreatePost = async () => {
           />
           
           <label className='font-semibold text-lg mt-6 mb-2'>Ok, Here Let It All Out</label>
-          <TextEditor
+          <textarea
             name='desc'
+            rows={6}
+            color={12}
+            className='rounded-lg text-3xl border p-8 rounded-3xl'
             placeholder='Description'
           />
-        <input
-            hidden
-            name='creatorImg'
-            value={image}
-        />
-        <input
-            hidden
-            name='creator'
-            value={creator}
-        />
          <SubmitButton />
         </form>
       </div>
